@@ -7,6 +7,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
   font-family: 'Times New Roman', Times, serif;
   align-items: center;
+  background-image: url(/public/bg1.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
 }
 
 code {

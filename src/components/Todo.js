@@ -1,6 +1,8 @@
 import React from 'react';
 import './Todo.css';
 
+const remove = '/pngegg.png';
+
 const Todo = ({ id, title, description, completed, toggleTodo, removeTodo }) => {
 
     return (
@@ -12,7 +14,7 @@ const Todo = ({ id, title, description, completed, toggleTodo, removeTodo }) => 
             <div>
                 <button className={ completed ? "todo__button--remove" : "todo__button--remove--hide"}
                     onClick={removeTodo}>
-                    Remove
+                    <img src={remove} alt="" style={{ width: "25px", hight: "auto"}}/>
                 </button>
             </div>
         </div>

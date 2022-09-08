@@ -34,8 +34,7 @@ const todosReducer = (state = TASKS, action) => {
                         }
                     }
                     return todo;
-                }
-                )
+                })
             };
         case types.REMOVE_TODO:
             return {
