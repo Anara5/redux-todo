@@ -1,6 +1,7 @@
 .TodoList {
   display: flex;
   flex-direction: column;
+  margin-bottom: 2%;
 }
 
 .one-todo {
@@ -45,11 +46,10 @@
   border: none;
   background-color: rgb(255, 0, 0);
   color: rgb(0, 0, 0);
-  margin-right: 0.5em;
+  margin-right: 1em;
   margin-left: 0.5em;
   align-self: flex-end;
   margin-bottom: 1em;
-
   position: absolute;
   right: 0;
   bottom: 0;

@@ -1,7 +1,12 @@
 .Todo {
-  width: 60%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-bottom: 10%;
+  width: 60%;
+}
+
+@media (max-width: 768px) {
+  .Todo {
+    width: 90%;
+  }
 }

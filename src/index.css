@@ -1,16 +1,12 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-family: 'Times New Roman', Times, serif;
+  font-family: Avenir;
   align-items: center;
-  background-image: url(/public/bg1.jpg);
+  background-image: url("/bg1.jpg");
+  /* background-color: #2F4F4F; */
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-position: center;
+  background-size: cover;
 }
 
 code {

@@ -14,7 +14,7 @@ const Todo = ({ id, title, description, completed, toggleTodo, removeTodo }) => 
             <div>
                 <button className={ completed ? "todo__button--remove" : "todo__button--remove--hide"}
                     onClick={removeTodo}>
-                    <img src={remove} alt="" style={{ width: "25px", hight: "auto"}}/>
+                    <img src={remove} alt="remove" style={{ width: "25px", hight: "auto"}}/>
                 </button>
             </div>
         </div>

@@ -1,41 +1,38 @@
-import React from 'react';
-import TodoInput from './TodoInput';
+import React, { useRef } from 'react';
 import Todo from './Todo';
 import './TodoList.css';
 import { useSelector, useDispatch } from 'react-redux';
-import { addTodo, completeTodo, removeTodo } from '../redux/action';
+import { completeTodo, removeTodo } from '../redux/action';
+import { useScrollbar } from '../hooks/scrollHook';
 
 const TodoList = () => {
-    const state = useSelector(state => ({ ...state.todos }));
+    // const state = useSelector(state => ({ ...state.todos }));
+    const stateTodos = useSelector(state => state.todos);
     const dispatch = useDispatch();
-    const create = (todoTitle, todoDesc) => {
-        const newTodo = {
-            title: todoTitle,
-            description: todoDesc,
-        };
-        dispatch(addTodo(newTodo));
-    }
+    const todoWrapper = useRef(null);
+    const hasScroll = stateTodos.length > 3;
+
+    useScrollbar(todoWrapper, hasScroll);
 
     return (
-        <div className="Todo">
-            <TodoInput createTodo={create} />
+        <div className="Todo"
+            style={{marginTop: '1rem', height: hasScroll ? '120px' : 'auto', minHeight: '120px' }}
+            ref={todoWrapper}>
             <div id="todoList" className="TodoList">
-                {state.todos && state.todos.map(todo => {
+                {stateTodos.todos && stateTodos.todos.map(todo => {
                     return (
                             <Todo
-                            key={todo.id}
-                            id={todo.id}
-                            title={todo.title}
-                            description={todo.description}
-                            completed={todo.completed}
-                            toggleTodo={() => dispatch(completeTodo(todo))}
-                            removeTodo={() => dispatch(removeTodo(todo))}
-                            />
-                        )
-                    })
+                                key={todo.id}
+                                {...todo}
+                                toggleTodo={() => dispatch(completeTodo(todo))}
+                                removeTodo={() => dispatch(removeTodo(todo))}
+                                />
+                            )
+                        }
+                    )
                 }
             </div>
-        </div>
+        </div>        
     );
 }
 

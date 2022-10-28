@@ -47,4 +47,3 @@ const todosReducer = (state = TASKS, action) => {
 }
 
 export default todosReducer;
-

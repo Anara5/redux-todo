@@ -3,13 +3,18 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 3rem;
+  margin-top: 0.5rem;
 }
 
 .App h3 {
-  font-size: 2rem;
-  color: rgb(33, 37, 42);
+  font-size: 1.5rem;
   font-weight: 800;
+  color: navy;
+}
+
+.App h2 {
+  text-shadow: -1px 0 yellow, 0 1px yellow, 1px 0 yellow, 0 -1px yellow;
+  letter-spacing: 0.2em;
 }
 
 @media (max-width: 768px) {
