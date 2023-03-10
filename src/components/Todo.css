@@ -10,7 +10,7 @@
   flex-direction: row;
   border-radius: 1em;
   padding-bottom: 1em;
-  background-color: rgb(181, 251, 222);
+  background: linear-gradient(to bottom, rgb(18, 250, 152, 0.9), rgb(255, 255, 255, 0.9));
   list-style-type: none;
   order: 50;
   word-break:break-all;
@@ -29,6 +29,7 @@
   justify-content: space-between;
   word-break:break-all;
   padding: 0.5em 0.5em 2.5em 0.5em;
+  color: rgb(128, 128, 128);
 }
 
 .todo--toggle {

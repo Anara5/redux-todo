@@ -7,14 +7,31 @@
 }
 
 .App h3 {
+  color: navy;
   font-size: 1.5rem;
   font-weight: 800;
-  color: navy;
+  font-family: 'Helvetica Neue', sans-serif;
+  background: linear-gradient(to right, navy, blue);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .App h2 {
   text-shadow: -1px 0 yellow, 0 1px yellow, 1px 0 yellow, 0 -1px yellow;
   letter-spacing: 0.2em;
+  animation: pulse 1s;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 @media (max-width: 768px) {
