@@ -1,5 +1,8 @@
 # Getting Started with Create React App
 
+This project is created for a basic skills of Redux studies. Techs used: React, Redux, Javascript, CSS, HTML.
+The project is hosted with Netlify.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
